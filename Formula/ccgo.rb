@@ -1,28 +1,28 @@
 class Ccgo < Formula
   desc "A high-performance C++ cross-platform build CLI"
   homepage "https://github.com/zhlinh/ccgo"
-  version "3.8.11"
+  version "3.8.12"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/zhlinh/ccgo/releases/download/v#{version}/ccgo-aarch64-apple-darwin.tar.gz"
-      sha256 "1e1575342f337f596c52f863c6c63bbc1cab27e618f8bffc12914404e8d4c7f3" # darwin-arm64
+      sha256 "ec2d9d6016742c05cea58b6b0e05fc36a3ad6dbc3ab90f5275bc12513d6efda4" # darwin-arm64
     end
     if Hardware::CPU.intel?
       url "https://github.com/zhlinh/ccgo/releases/download/v#{version}/ccgo-x86_64-apple-darwin.tar.gz"
-      sha256 "bc80582e1fdcf9d2a77ae623d3bb1dd8cdc8241c1821f98d880a469b83ef0154" # darwin-x86_64
+      sha256 "1b5b3b620cb2730c11217f03371429e9309c8a3bb7fe07b1be262eacad91fe70" # darwin-x86_64
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/zhlinh/ccgo/releases/download/v#{version}/ccgo-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "c69656421188157f565c9d109e54cceee544203df98b2b166f2041eb16b400b4" # linux-arm64
+      sha256 "ce96bb6f329c8ceab57d8c2fe8123f5a708dfedd8eb09fe39f99854698b28829" # linux-arm64
     end
     if Hardware::CPU.intel?
       url "https://github.com/zhlinh/ccgo/releases/download/v#{version}/ccgo-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "19be071fc0dce44b222e88f24ee68a561ceebf5f7e420ac7f4b311d2b0f9ff31" # linux-x86_64
+      sha256 "716a7d9b3ff90dffdc56fe1dd040721bfd42c882410f895de47becb834474b06" # linux-x86_64
     end
   end
 
